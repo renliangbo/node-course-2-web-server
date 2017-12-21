@@ -44,6 +44,6 @@ app.get('/projects', (req, res) => {
 		res.render('projects.hbs', {pageTitle: 'Projects'})
 })
 
-app.listen(port, () => {
+app.listen(port,"47.94.160.228", () => {
 		console.log(`Server is up on port ${port}`)
 })

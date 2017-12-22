@@ -1,9 +1,10 @@
+
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
 const port = process.env.PORT || 3000;
-
+const hostname="0.0.0.0";
 var app = express();
 
 app.use((req, res, next) => {
@@ -44,6 +45,6 @@ app.get('/projects', (req, res) => {
 		res.render('projects.hbs', {pageTitle: 'Projects'})
 })
 
-app.listen(port, () => {
+app.listen(port,hostname, () => {
 		console.log(`Server is up on port ${port}`)
 })
